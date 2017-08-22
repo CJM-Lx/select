@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+			.select{
+				margin: 10px;
+				width: 640px;
+			}
+			.input_left{
+				display: inline-block;
+				position: relative;
+				left: 0;
+				top:0;
+			}
+			.input_border{
+				border: 1px solid #ccc;
+				width: 540px;
+				height: 34px;
+				position: absolute;
+			}
+			.text_input{
+				width: 520px;
+				height: 22px;
+    			margin: 6px 0 0 7px;
+				border: none;
+				outline: none;
+				position: relative;
+			}
+			.btn_right{
+				float: right;
+			    width: 97px;
+			    height: 34px;
+			    cursor: pointer;
+			}
+			.search_btn{
+			    width: 100px;
+			    height: 30px;
+			    margin-left: -2px;
+			    background-color: coral;
+			    text-align: center;
+			    color: white;
+			    padding-top: 5px;
+			    border: 1px solid coral;
+			}
+			.select_ul{
+				position: absolute;
+    			top: 32px;	
+				list-style: none;
+			    background-color: white;
+			    border: 1px solid wheat;
+			    width: 102.5%;
+			    z-index: 9;
+			}
+			.select_li{
+    			padding: 5px;
+			}
+			.select_li:hover{
+				background-color: wheat;
+			}
+			.dis_no{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="select" id="select"></div>
+		<div class="select" ></div>
+		<div class="select" ></div>
+		<script src="js/js.js" type="text/javascript"></script>
+		<script>
+		var option = {
+			url:"data/data.json",
+			dataType:"json"
+		}
+			window.onload = function(){
+				Select.init(".select",option);
+			}
+		</script>
+	</body>
+</html>
